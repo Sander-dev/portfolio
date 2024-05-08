@@ -1,10 +1,6 @@
 'use client'
 
-// next image
-import Image from "next/image";
-
 // components
-import ParticlesContainer from '../components/ParticlesContainer';
 import ProjectsBtn from '../components/ProjectsBtn';
 import Avatar from '../components/Avatar';
 
@@ -17,14 +13,11 @@ import { usePathname } from 'next/navigation'
 // variants
 import { fadeIn } from '../variants';
 
-export default function Home({
-  Component,
-  pageProps
-}) {
+export default function Home() {
 
   const pathname = usePathname()
   return (
-    <div className="bg-primary/60 h-full">
+    <main className="bg-primary/60 h-full">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
@@ -34,8 +27,8 @@ export default function Home({
             initial='hidden'
             animate='show'
             className="h1">
-            Transforming Ideas <br /> Into{' '}
-            <span className="text-accent">Digital Reality</span>
+            Portifólio <br />{' '}
+            <span className="text-accent">Felipe Sander</span>
           </motion.h1>
           {/* subtitle */}
           <motion.p
@@ -43,7 +36,8 @@ export default function Home({
             initial='hidden'
             animate='show'
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium risus dapibus, placerat urna nec, semper ligula. Aliquam finibus molestie leo. Praesent luctus erat turpis, in rhoncusdasdasd.
+            Neste portfólio, você encontrará uma amostra do meu trabalho e dos projetos nos quais estive envolvido. Estou sempre aberto a novas oportunidades e desafios, e estou ansioso para colaborar em projetos que me permitam aplicar minhas habilidades e contribuir para o sucesso da equipe.
+            Obrigado por visitar meu portfólio. Estou à disposição para conversar e discutir como podemos trabalhar juntos para alcançar nossos objetivos comuns.
           </motion.p>
 
 
@@ -67,7 +61,7 @@ export default function Home({
         <div className='bg-nome xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0'>
         </div>
         {/* particles */}
-        <div>Particles</div>
+
         {/* avatar img */}
         <motion.div
           variants={fadeIn('up', 0.5)}
@@ -80,6 +74,6 @@ export default function Home({
 
 
       </div>
-    </div>
+    </main>
   );
 };

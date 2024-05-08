@@ -1,5 +1,3 @@
-'use client';
-
 // style global
 import '../styles/globals.css';
 
@@ -17,15 +15,6 @@ const sora = Sora({
 import Nav from '@/components/Nav';
 import Header from '../components/Header'
 import TopLeftimg from '../components/TopLeftImg'
-import Transition from '@/components/Transition';
-
-// next pathname
-import { usePathname } from 'next/navigation'
-
-// framer motion
-import { motion } from "framer-motion"
-import { useRouter } from 'next/navigation';
-
 
 export default function Layout({ children }) {
   return (
@@ -37,9 +26,7 @@ export default function Layout({ children }) {
           <TopLeftimg />
           <Nav />
           <Header />
-          <main >
-            {children}
-          </main>
+          {children}
         </div>
       </body>
     </html>
