@@ -5,18 +5,14 @@ import {
   HiHome,
   HiUser,
   HiViewColumns,
-  HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from 'react-icons/hi2'
 
 // nav data
 export const navData = [
   { name: 'home', path: '/', icon: <HiHome /> },
-  { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
+  { name: 'curriculo', path: '/curriculo', icon: <HiUser /> },
   { name: 'work', path: '/work', icon: <HiViewColumns /> },
-  { name: 'testimonials', path: '/testimonials', icon: <HiChatBubbleBottomCenterText /> },
   { name: 'contact', path: '/contact', icon: <HiEnvelope /> },
 ];
 
@@ -32,7 +28,7 @@ export default function Nav() {
 
   return (
     <nav className='flex flex-col xl:right-4 items-center xl:justify-center gap-y-4 
-    fixed h-max bottom-0 mt-auto xl:right[2%] z-50 top-0 w-full xl:w-16
+    fixed h-max bottom-0 mt-auto xl:left[2%] z-50 top-0 w-full xl:w-16
     xl:max-w-md xl:h-screen'>
       {/* inner */}
       <div className='flex w-full xl:flex-col items-center justify-between 
@@ -47,13 +43,16 @@ export default function Nav() {
               href={link.path}
               key={index}>
               {/* tooltip */}
-              <div className='absolute pr-14 right-0 hidden xl:group-hover:flex'>
-                <div className='bg-white relative flex text-primary items-center p-[6px] rounded-[3px]'>
-                  <div className='text-[12px] leading-none font-semibold capitalize'>
-                    {link.name}
+              {/* triangle */}
+              <div className='hidden xl:group-hover:flex items-center'>
+                <div className='border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -left-7'></div>
+                <div className='absolute pr-12 right-0'>
+                  <div className='bg-white relative flex text-primary items-center p-[6px] rounded-[3px]'>
+                    <div className='text-[12px] leading-none font-semibold capitalize'>
+                      {link.name}
+                    </div>
+
                   </div>
-                  {/* triangle */}
-                  <div className='border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2'></div>
                 </div>
               </div>
               {/* icon */}
