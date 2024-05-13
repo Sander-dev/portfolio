@@ -1,6 +1,6 @@
 export default function Curriculo() {
     return (
-        <div className="flex flex-col items-center w-full pt-12">
+        <div className="flex flex-col items-center w-full pt-12 max-xl:pb-[80px]">
             <h1 className="text-6xl max-sm:text-4xl">FELIPE SANDER</h1>
             <div className="max-sm:flex-col flex sm:gap-20 xl:gap-28">
                 <p className="text-cyan-500">(38) 99738-8178 </p>
@@ -25,7 +25,7 @@ export default function Curriculo() {
                     e frameworks como Next.js e Express, trabalhando dentro de uma metodologia ágil com sprints e
                     reuniões periódicas para feedback.
                 </p>
-                <div className="flex">
+                <div className="flex max-sm:flex-col">
                     <div className="w-1/2">
                         <h1 className="text-xl mb-4">TECNOLOGIAS</h1>
                         <p className="text-white/70 mb-4">

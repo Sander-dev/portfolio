@@ -21,7 +21,7 @@ export default function Layout({ children }) {
     <html>
       <body >
         <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable}
-  font-sora relative`}>
+  font-sora`}>
 
           <TopLeftimg />
           <Nav />
