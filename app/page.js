@@ -17,10 +17,10 @@ export default function Home() {
 
   const pathname = usePathname()
   return (
-    <main className="bg-primary/60 h-full">
+    <main className="bg-primary/60 h-full overflow-hidden relative">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
+        <div className="text-center flex flex-col justify-center xl:pt-28 xl:text-left h-full container mx-auto">
           {/* title */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
@@ -35,7 +35,7 @@ export default function Home() {
             variants={fadeIn('down', 0.3)}
             initial='hidden'
             animate='show'
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-4">
             Neste portfólio, você encontrará uma amostra do meu trabalho e dos projetos nos quais estive envolvido. Estou sempre aberto a novas oportunidades e desafios, e estou ansioso para colaborar em projetos que me permitam aplicar minhas habilidades e contribuir para o sucesso da equipe.
             Obrigado por visitar meu portfólio. Estou à disposição para conversar e discutir como podemos trabalhar juntos para alcançar nossos objetivos comuns.
           </motion.p>
@@ -51,8 +51,11 @@ export default function Home() {
             animate='show'
             className="xl:flex max-xl:hidden"
           >
-            <ProjectsBtn />
+            <div className="flex justify-center xl:justify-start relative z-40">
+              <ProjectsBtn />
+            </div>
           </motion.div>
+
         </div>
       </div>
       {/* image */}
