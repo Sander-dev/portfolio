@@ -31,25 +31,25 @@ export default function Curriculo() {
                 <div className="flex max-sm:flex-col">
                     <div className="w-1/2">
                         <h1 className="text-xl mb-4">TECNOLOGIAS</h1>
-                        <p className="text-white/70 mb-4">
+                        <ul className="text-white/70 mb-4">
                             <li>TypeScript</li>
                             <li>JavaScript</li>
                             <li>ReactJS</li>
                             <li>Tailwind CSS</li>
-                            <li>Styled-Component</li>
+                            <li>Styled-Components</li>
                             <li>Git</li>
                             <li>NextJS</li>
-                        </p>
+                        </ul>
                     </div>
                     <div>
                         <h1 className="text-xl mb-4">PRINCIPAIS CURSOS</h1>
-                        <p className="text-white/70 mb-4">
+                        <ul className="text-white/70 mb-4">
                             <li>JavaScript Puro – Danki Code</li>
                             <li>Node.js – Danki Code</li>
                             <li>HTML, CSS, JavaScript – Danki Code</li>
                             <li>Web Design – Danki Code</li>
                             <li>ReactJS – NLW RocketSeat</li>
-                        </p>
+                        </ul>
                     </div>
                 </div>
             </div>
