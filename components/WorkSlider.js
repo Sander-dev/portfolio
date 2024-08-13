@@ -1,4 +1,4 @@
-import { Carousel } from "flowbite-react";
+import { Carousel, DarkThemeToggle } from "flowbite-react";
 import Link from "next/link";
 
 const WorkSlider = () => {
@@ -10,16 +10,21 @@ const WorkSlider = () => {
 
   return (
     <div className="h-full w-full">
-      <Carousel pauseOnHover>
+      <Carousel slideInterval="5000" theme={{
+        control: {
+          base: 'inline-flex h-8 w-8 items-center justify-center rounded-full bg-gray-700 shadow-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500',
+          icon: 'h-4 w-4 text-white',
+        }
+      }}>
         {projects.map((project, index) => (
           <div key={index} className="relative">
             <Link rel="noopener noreferrer" target="_blank" href={project.link}>
-              <img className="object-cover w-full h-[90%]" src={project.src} alt={project.alt} />
+              <img className="object-cover w-full h-full" src={project.src} alt={project.alt} />
             </Link>
           </div>
         ))}
       </Carousel>
-    </div>
+    </div >
   );
 };
 
