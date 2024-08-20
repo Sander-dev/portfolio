@@ -27,7 +27,7 @@ export default function Home() {
             initial='hidden'
             animate='show'
             className="h1">
-            Portifólio <br />{' '}
+            Portfólio <br />{' '}
             <span className="text-accent">Felipe Sander</span>
           </motion.h1>
           {/* subtitle */}
